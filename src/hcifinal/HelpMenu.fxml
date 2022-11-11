@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hcifinal.HelpMenuController">
+    <stylesheets>
+        <URL value="@HelpMenu.css" />
+    </stylesheets>
+   <children>
+      <SplitPane dividerPositions="0.13316582914572864" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane id="helpBackTop" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="76.0" prefWidth="798.0">
+               <children>
+                  <Text id="helpTitle" layoutX="14.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Universal Media Server Help" wrappingWidth="529.13671875" />
+                  <ImageView fitHeight="51.0" fitWidth="75.0" layoutX="488.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Photos/questionMark.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="63.0" fitWidth="71.0" layoutX="723.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Photos/Copy%20of%20Universal%20Media%20Player%20Logo.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="798.0">
+               <children>
+                  <SplitPane dividerPositions="0.3103015075376884" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="243.0">
+                           <children>
+                              <ScrollPane hbarPolicy="NEVER" layoutX="50.0" layoutY="158.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="513.0" prefWidth="217.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <content>
+                                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="738.0" prefWidth="241.0">
+                                       <children>
+                                          <VBox layoutX="1.0" prefHeight="738.0" prefWidth="231.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <ToggleButton fx:id="introductionBtn" alignment="BASELINE_RIGHT" mnemonicParsing="false" onAction="#introductionBtnPressed" prefHeight="97.0" prefWidth="231.0" text="1. Introduction" textAlignment="RIGHT" />
+                                                <ToggleButton fx:id="networkBtn" alignment="BASELINE_RIGHT" mnemonicParsing="false" onAction="#networkBtnPressed" prefHeight="97.0" prefWidth="231.0" text="2. Network and &#10;Technical Basics" textAlignment="RIGHT" />
+                                                <ToggleButton fx:id="installBtn" alignment="BASELINE_RIGHT" mnemonicParsing="false" onAction="#installBtnPressed" prefHeight="97.0" prefWidth="231.0" text="3. Installation" textAlignment="RIGHT" />
+                                                <ToggleButton fx:id="configBtn" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#configBtnPressed" prefHeight="97.0" prefWidth="231.0" text="4. General &#10;Configuration" textAlignment="RIGHT" />
+                                                <ToggleButton fx:id="navigationBtn" alignment="BASELINE_RIGHT" mnemonicParsing="false" onAction="#navigationBtnPressed" prefHeight="97.0" prefWidth="231.0" text="5. Navigation/&#10;Share Settings" textAlignment="RIGHT" />
+                                                <ToggleButton fx:id="transcodeBtn" alignment="BASELINE_RIGHT" mnemonicParsing="false" onAction="#transcodeBtnPressed" prefHeight="97.0" prefWidth="231.0" text="6. Transcoding&#10;Settings" textAlignment="RIGHT" />
+                                                <ToggleButton fx:id="externalBtn" alignment="BASELINE_RIGHT" mnemonicParsing="false" onAction="#externalBtnPressed" prefHeight="97.0" prefWidth="231.0" text="7. External&#10;Applications" textAlignment="RIGHT" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                           </children></AnchorPane>
+                      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="545.0">
+                           <children>
+                              <SplitPane dividerPositions="0.898238747553816" orientation="VERTICAL" prefHeight="513.0" prefWidth="610.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="543.0">
+                                       <children>
+                                          <Pane fx:id="transcodePane" prefHeight="454.0" prefWidth="543.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <ScrollPane hbarPolicy="NEVER" prefHeight="456.0" prefWidth="544.0" vbarPolicy="ALWAYS">
+                                                   <content>
+                                                      <AnchorPane id="helpBack" minHeight="0.0" minWidth="0.0" prefHeight="660.0" prefWidth="529.0">
+                                                         <children>
+                                                            <VBox prefHeight="660.0" prefWidth="529.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <children>
+                                                                  <Text id="helpSubTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Transcoding Settings" wrappingWidth="503.515625" />
+                                                                  <TextArea id="helpBack" editable="false" prefHeight="146.0" prefWidth="529.0" text="The &quot;Transcoding settings&quot; tab  under settings allows you to specify how content &#10;will be transcoded. UMS uses external programs to transcode and stream content &#10;to your device. Some of these programs overlap in what kind of media they can &#10;transcode. For each media type there is a list of programs, sorted by preference. &#10;The topmost program is most likely to be used. If it cannot transcode the media, &#10;the next program on the list is used, and so on.&#10;&#10;This tab also allows to set the details of transcoding for each program. Below is a &#10;list of the settings on this tab.">
+                                                                     <font>
+                                                                        <Font size="12.0" />
+                                                                     </font>
+                                                                  </TextArea>
+                                                                  <Text id="helpSubTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="General Settings" wrappingWidth="491.13671875" />
+                                                                  <TextArea id="helpBack" prefHeight="174.0" prefWidth="529.0" text="Transcode buffer maximum size: This value is about how much temporary space &#10;should be used for buffering a video before sending it to PS3. Default value is 400.&#10;&#10;Number of cores used for transcoding: This value is bout how many CPU cores &#10;should be used for transcoding. The maximum value depends on the physical &#10;available count of &quot;real processor cores&quot;. That means hyperthreading virtual CPU &#10;cores do not count! If you are not sure, analyze your CPU with the free tool CPU-z &#10;on Windows systems. On Linux have a look at the virtual proc-filesystem. In the &#10;file /proc/cpuinfo you will find more details about your CPU. You also get much &#10;information about CPUs from AMD and Intel from their Wikipedia-articles. &#10;Regardless, UMS should be able to detect and set the correct amount of cores.">
+                                                                     <font>
+                                                                        <Font size="12.0" />
+                                                                     </font>
+                                                                  </TextArea>
+                                                                  <Text id="helpSubTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Video File Engines: MEncoder" wrappingWidth="504.14453125" />
+                                                                  <TextArea id="helpBack" prefHeight="245.0" prefWidth="524.0" text="A/V sync alternative method: If video and audio get out of sync disabling this might &#10;help.&#10;&#10;Force framerate parsed from FFmpeg: If framerate isn't recognized correctly &#10;(video is running too fast/slow) change this setting. &#10;&#10;Remux videos with tsMuxeR when possible instead of transcoding: When MEncoder &#10;transcoding engine is used and UMS recognizes a compatible video it will stream &#10;to tsMuxeR, which means there is no quality loss. Matroska video (mkv) for &#10;example aren't supported on PS3 but often the audio and video streams are &#10;compatible, so tsMuxeR creates a compatible m2ts container which contains the &#10;original audio and video stream and the PS3 is able to playback.&#10;">
+                                                                     <font>
+                                                                        <Font size="12.0" />
+                                                                     </font>
+                                                                  </TextArea>
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets left="5.0" />
+                                                               </padding>
+                                                            </VBox>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </Pane>
+                                          <Pane fx:id="navigationPane" prefHeight="454.0" prefWidth="543.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <ScrollPane hbarPolicy="NEVER" prefHeight="456.0" prefWidth="544.0" vbarPolicy="ALWAYS">
+                                                   <content>
+                                                      <AnchorPane id="helpBack" minHeight="0.0" minWidth="0.0" prefHeight="660.0" prefWidth="529.0">
+                                                         <children>
+                                                            <VBox prefHeight="660.0" prefWidth="529.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <children>
+                                                                  <Text id="helpSubTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Navigation/Share Settings" wrappingWidth="467.515625" />
+                                                                  <TextArea id="helpBack" editable="false" prefHeight="56.0" prefWidth="529.0" text="The &quot;Navigation / Share &quot; tab in the settings menu allow you to determine the &#10;details of how UMS shares the content to your device. Below are descriptions of &#10;some of the options on this tab.">
+                                                                     <font>
+                                                                        <Font size="12.0" />
+                                                                     </font>
+                                                                  </TextArea>
+                                                                  <Text id="helpSubTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Thumbnails" wrappingWidth="491.13671875" />
+                                                                  <TextArea id="helpBack" prefHeight="92.0" prefWidth="544.0" text="Generate thumbnails: Select the checkbox for automatic creation of thumbnail &#10;pictures of your media files&#10;&#10;Alternate video cover art folder: Select the folder on your filesystem which &#10;contains cover art for videos">
+                                                                     <font>
+                                                                        <Font size="12.0" />
+                                                                     </font>
+                                                                  </TextArea>
+                                                                  <Text id="helpSubTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Navigation and Parsing Settings" wrappingWidth="504.14453125" />
+                                                                  <TextArea id="helpBack" prefHeight="160.0" prefWidth="529.0" text="Hide file extensions: Some people might get confused if they see file extensions &#10;like jpg or avi, so you can hide them.&#10;&#10;Hide empty: Only display folders which contain media files&#10;&#10;Show iTunes library: Only available when iTunes is installed. Displays the iTunes &#10;library as a folder on your device so you can browse it.&#10;&#10;File Order: Select how file lists are sorted and displayed on your device: by name &#10;or by date.">
+                                                                     <font>
+                                                                        <Font size="12.0" />
+                                                                     </font>
+                                                                  </TextArea>
+                                                                  <Text id="helpSubTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Shared Content Menu" wrappingWidth="504.14453125" />
+                                                                  <TextArea id="helpBack" prefHeight="160.0" prefWidth="529.0" text="shared folders: All local drives are made available to PS3 by UMS. In a more secure &#10;environment you might want to chose the folders which are presented to your PS3. &#10;Press green + icon to add folders for access by UMS/PS3. Select folder and press &#10;red X icon to remove access to a folder. Press up and down arrows to change order &#10;of these folders.&#10;&#10;magnifying glass: Start first scan on your hard drive for media files to collect info &#10;about them in the cache.">
+                                                                     <font>
+                                                                        <Font size="12.0" />
+                                                                     </font>
+                                                                  </TextArea>
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets left="5.0" />
+                                                               </padding>
+                                                            </VBox>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </Pane>
+                                          <Pane fx:id="configPane" prefHeight="454.0" prefWidth="543.0" style="-fx-background-color: #3c3939;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <ScrollPane hbarPolicy="NEVER" prefHeight="456.0" prefWidth="544.0" vbarPolicy="ALWAYS">
+                                                   <content>
+                                                      <AnchorPane id="helpBack" minHeight="0.0" minWidth="0.0" prefHeight="544.0" prefWidth="529.0">
+                                                         <children>
+                                                            <VBox prefHeight="660.0" prefWidth="529.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <children>
+                                                                  <Text id="helpSubTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="General Configuration" wrappingWidth="467.515625" />
+                                                                  <TextArea id="helpBack" editable="false" prefHeight="43.0" prefWidth="529.0" text="The &quot;General Configuration&quot; tab of UMS allows you to set general options that &#10;determine how UMS will run. Below is an overview of the options on this tab.">
+                                                                     <font>
+                                                                        <Font size="12.0" />
+                                                                     </font>
+                                                                  </TextArea>
+                                                                  <Text id="helpSubTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="General Settings" wrappingWidth="491.13671875" />
+                                                                  <TextArea id="helpBack" prefHeight="84.0" prefWidth="524.0" text="Language: Select the language of UMS. To see the selection in effect you have to &#10;restart UMS.&#10;&#10;Start minimized: Apply if you want UMS start in the system tray (window &#10;minimized)">
+                                                                     <font>
+                                                                        <Font size="12.0" />
+                                                                     </font>
+                                                                  </TextArea>
+                                                                  <Text id="helpSubTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Network Settings" wrappingWidth="504.14453125" />
+                                                                  <TextArea id="helpBack" prefHeight="267.0" prefWidth="524.0" text="Theses options are found under the Network tab in the settings menu.&#10;&#10;Force networking on interface: UMS determines the default network to send &#10;broadcasts. When UMS does not detect your PS3 and your computer has multiple &#10;networks, it may have chosen the wrong default network. Select the correct &#10;network from the pulldown.&#10;&#10;Force IP of the server: By default UMS will use the default IP address of the &#10;computer it runs on. If your computer has multiple IP addresses, you enter the &#10;preferred IP address for UMS to use here.&#10;&#10;Force port of server: By default UMS uses TCP/IP port 5001. If this port is already &#10;in use, set a free alernate port number like 6001&#10;&#10;Use IP-filter: Set IP-address of allowed streaming client (PS3), all other will fail to &#10;connect (not working when HTTP Engine v2 is enabled!)">
+                                                                     <font>
+                                                                        <Font size="12.0" />
+                                                                     </font>
+                                                                  </TextArea>
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets left="5.0" />
+                                                               </padding>
+                                                            </VBox>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </Pane>
+                                          <Pane fx:id="installPane" prefHeight="454.0" prefWidth="543.0" style="-fx-background-color: #000000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <ScrollPane hbarPolicy="NEVER" prefHeight="456.0" prefWidth="544.0" vbarPolicy="ALWAYS">
+                                                   <content>
+                                                      <AnchorPane id="helpBack" minHeight="0.0" minWidth="0.0" prefHeight="942.0" prefWidth="529.0">
+                                                         <children>
+                                                            <VBox prefHeight="942.0" prefWidth="529.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <children>
+                                                                  <Text id="helpSubTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Installation" wrappingWidth="467.515625" />
+                                                                  <Text id="helpSubTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Java" wrappingWidth="491.13671875" />
+                                                                  <TextArea id="helpBack" editable="false" prefHeight="58.0" prefWidth="524.0" text="Java programming language is a requirement for UMS. Therefore you need to &#10;install Java second edition runtime environment (JRE), at least version 6. You can &#10;get the latest JRE at https://java.com/en/download/">
+                                                                     <font>
+                                                                        <Font size="12.0" />
+                                                                     </font>
+                                                                  </TextArea>
+                                                                  <Text id="helpSubTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Installation on Windows" wrappingWidth="492.14453125" />
+                                                                  <TextArea id="helpBack" prefHeight="45.0" prefWidth="529.0" text="After installing Java Runtime you can install Universal Media Server. Double-click &#10;the setup file and follow the instructions. ">
+                                                                     <font>
+                                                                        <Font size="12.0" />
+                                                                     </font>
+                                                                  </TextArea>
+                                                                  <Text id="helpSubTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Installation on Linux" wrappingWidth="489.14453125" />
+                                                                  <TextArea id="helpBack" prefHeight="316.0" prefWidth="529.0" text="You also need to have Java installed on Linux. You should set environment variable &#10;JAVA_HOME to JRE installation path. After that you have to decompress the setup &#10;archive for Linux with the terminal command:&#10;&#10;tar xzf filename.tgz&#10;&#10;You have to install MPlayer, MEncoder, FFmpeg and tsMuxeR. If you like to stream &#10;web content also install VLC. Make sure that all binaries of these tools can be &#10;found via PATH variable. Start a shell, cd to your installation directory and start &#10;UMS with terminal command: &#10;&#10;./UMS.sh&#10;&#10;Check permissions and set them if necessary with:&#10;&#10;chmod ug+x UMS.sh&#10;&#10;You can either use packages from your Linux distrubution or compile the tools by &#10;yourself. Sometimes distributors do not set important compiler options, e.g. &#10;scaling support for FFmpeg. So I recommend you to compile it from source.">
+                                                                     <font>
+                                                                        <Font size="12.0" />
+                                                                     </font>
+                                                                  </TextArea>
+                                                                  <Text id="helpSubTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Connecting Devices" wrappingWidth="485.14453125" />
+                                                                  <TextArea id="helpBack" prefHeight="420.0" prefWidth="529.0" text="First start up and login to your PS3 or other viewing device. This will allow UMS to &#10;detect it on the network.&#10;&#10;After your device has started up, start UMS. UMS will try to detect the device.&#10;UMS should automatically detect your device. After about 10 seconds, you should &#10;see the device under detected media renderer’s on the Media Status screen.&#10;If you connected a PS3 you should be able to access your media on it via the &#10;cross media bar.&#10;&#10;Important Note: The PlayStation 3 separates &quot;Photo&quot;, &quot;Music&quot; and &quot;Video&quot; in &#10;different XMB entry points. Even though you see all folders on your media server, &#10;you can only see the files that correspond to your XMB entry point.&#10;&#10;Troubleshooting: &#10;If you cannot detect a device you can verify the network settings in the settings &#10;menu under the tab network&#10;&#10;In the majority of reported cases there are two problem causes: &#10;&#10;    • Port 5001 is already in use by another software, for example Azureus Vuze &#10;    • UMS uses the wrong network interface as default &#10;&#10;In the network settings you can then choose the correct network interface and &#10;type in an unused port. E.g. 6001. Then you can restart the server.&#10;For further help check our website https://www.universalmediaserver.com/ and &#10;check the support page.">
+                                                                     <font>
+                                                                        <Font size="12.0" />
+                                                                     </font>
+                                                                  </TextArea>
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets left="5.0" />
+                                                               </padding>
+                                                            </VBox>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </ScrollPane>
+                                             </children></Pane>
+                                          <Pane fx:id="networkPane" prefHeight="454.0" prefWidth="543.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <ScrollPane hbarPolicy="NEVER" prefHeight="456.0" prefWidth="544.0" vbarPolicy="ALWAYS">
+                                                   <content>
+                                                      <AnchorPane id="helpBack" minHeight="0.0" minWidth="0.0" prefHeight="670.0" prefWidth="529.0">
+                                                         <children>
+                                                            <VBox prefHeight="670.0" prefWidth="529.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <children>
+                                                                  <Text id="helpSubTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 25;" text="Network and Technical Basics" wrappingWidth="467.515625" />
+                                                                  <Text id="helpSubTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Network Fundamentals" wrappingWidth="467.515625" />
+                                                                  <TextArea id="helpBack" editable="false" prefHeight="101.0" prefWidth="524.0" style="-fx-font-size: 12;" text="If you wants to see web content like YouTube videos an internet connection is &#10;required. Most used technology for accessing the internet is an ADSL- or &#10;cable-internet-connection. You connect the socket with a modem (ADSL or cable) &#10;which will later do the dial in. The modem can be connected directly to the &#10;computer. Most people use a WLAN-router to connect. The router is then a &#10;gateway to the internet for PS3 and your computer.">
+                                                                     <font>
+                                                                        <Font size="12.0" />
+                                                                     </font>
+                                                                  </TextArea>
+                                                                  <Text id="helpSubTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="WLAN" wrappingWidth="491.13671875" />
+                                                                  <TextArea id="helpBack" prefHeight="315.0" prefWidth="524.0" style="-fx-font-size: 12;" text="In most WLAN-routers nowadays there is an integrated modem and &#10;WLAN-accesspoint. The PS3 and notebooks both have integrated WLAN-NICs and &#10;can therefore communicate via WLAN when logged in into the access point. The &#10;integrated WLAN network card of PS3 is compatible to standard 802.11 b/g. This &#10;means a maximum network speed of 54Mb/s. To log in into the WALN-access &#10;point you need the following information:&#10;&#10;    • WLAN network name (SSID)&#10;    • WLAN network password (PSK)&#10;    • encryption standard (WPA, WPA2)&#10;    • radio channel / frequency&#10;&#10;All these settings are defined on your WLAN router / access point. If there are a &#10;lot of WLAN-networks in your range try to change to a radio channel with the &#10;biggest frequency distance regarding the other channels. Otherwise you may &#10;experience poor network quality and speed. Another quality factor is having &#10;walls with much ferroconcrete.&#10;&#10;You can reach an average speed of 35Mb/s. For streaming HD videos this might be &#10;not enough.">
+                                                                     <font>
+                                                                        <Font size="12.0" />
+                                                                     </font>
+                                                                  </TextArea>
+                                                                  <Text id="helpSubTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="LAN" wrappingWidth="221.14453125" />
+                                                                  <TextArea id="helpBack" prefHeight="174.0" prefWidth="522.0" style="-fx-font-size: 12;" text="The biggest advantage of LAN (wired connections) is its maximum bandwidth of &#10;1000 Mb/s. One big disadvantage is you have to wire all devices, so you need &#10;physical access. The devices (router, computer, PS3) have to be wired with Cat5e &#10;S/FTP with RJ45-plugs. All devices have to be connected to your router integrated &#10;switch. Of course you can extend the switch ports of your router with an uplink to &#10;an external switch. If your router switch ports are 100 Mb/s you can tune up &#10;maximum speed with an external 1000 Mb/s switch. The link speed and duplex &#10;mode should be handled automatically via autonegotiation. Sometimes it does not &#10;work correctly and you have to change settings on your computer by yourself.&#10;Check  out this video for changing linkspeed and duplex mode in Windows : &#10;https://www.youtube.com/watch?v=km4lbL-JP74">
+                                                                     <font>
+                                                                        <Font size="12.0" />
+                                                                     </font>
+                                                                  </TextArea>
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets left="5.0" />
+                                                               </padding>
+                                                            </VBox>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </Pane>
+                                          <Pane fx:id="introductionPane" prefHeight="454.0" prefWidth="543.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <ScrollPane hbarPolicy="NEVER" prefHeight="456.0" prefWidth="544.0" vbarPolicy="ALWAYS">
+                                                  <content>
+                                                    <AnchorPane id="helpBack" minHeight="0.0" minWidth="0.0" prefHeight="561.0" prefWidth="529.0">
+                                                         <children>
+                                                            <VBox prefHeight="660.0" prefWidth="529.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <children>
+                                                                  <Text id="helpSubTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Introduction" wrappingWidth="467.515625" />
+                                                                  <TextArea id="helpBack" editable="false" prefHeight="173.0" prefWidth="529.0" text="Universal Media Server (or UMS for short) is a program that streams media like &#10;video, audio or images from your computer or the web to a device called a &#10;&quot;renderer&quot; that can be anything that supports DLNA like a game console, a TV, &#10;a computer software or a mobile phone.&#10;&#10;This might sound simple, but it is in fact a complex matter. There are dozens of &#10;media formats in the world, and your console or TV only understands a couple of &#10;them. UMS allows you to browse media on your favorite renderer without having &#10;to worry about the details of what you are viewing. UMS takes care of retrieving &#10;the media (from file, network or web) and translating it to the best format that &#10;your device understands.">
+                                                                     <font>
+                                                                        <Font size="12.0" />
+                                                                     </font>
+                                                                  </TextArea>
+                                                                  <Text id="helpSubTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Media Renderer's" wrappingWidth="491.13671875" />
+                                                                  <TextArea id="helpBack" prefHeight="69.0" prefWidth="529.0" text="UMS is a DLNA compliant UPnP Media Server. It was originally written to support &#10;the PlayStation 3. However , other renderers support the same standards as the &#10;PlayStation 3 and UMS has been expanded to support a range of them, including &#10;Xbox 360 and various Samsung and Sony televisions.">
+                                                                     <font>
+                                                                        <Font size="12.0" />
+                                                                     </font>
+                                                                  </TextArea>
+                                                                  <Text id="helpSubTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Alternatives" wrappingWidth="504.14453125" />
+                                                                  <TextArea id="helpBack" prefHeight="200.0" prefWidth="537.0" text="Windows Media Player works well out of the box but isn't able to transcode or &#10;remux and has poor performance with a huge media database. Twonky media &#10;is not for free. Twonky media has its advantages in supporting a lot of different &#10;streaming clients, even NAS systems. TVersity is an average media server and &#10;has some advantages in streaming Internet content. But this advanced feature &#10;is not included in the free version. Mediatomb is often used on open source &#10;operating and embedded systems. It can be customized very well by experienced &#10;shellscript gurus. It is not a good choice for beginners.">
+                                                                     <font>
+                                                                        <Font size="12.0" />
+                                                                     </font>
+                                                                  </TextArea>
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets left="5.0" />
+                                                               </padding>
+                                                            </VBox>
+                                                         </children>
+                                                      </AnchorPane>
+                                                  </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </Pane>
+                                          <Pane fx:id="externalPane" prefHeight="454.0" prefWidth="543.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <AnchorPane id="helpBack" minHeight="0.0" minWidth="0.0" prefHeight="664.0" prefWidth="529.0">
+                                                   <children>
+                                                      <VBox prefHeight="390.0" prefWidth="529.0" AnchorPane.bottomAnchor="172.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Text id="helpSubTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="External Applications" wrappingWidth="467.515625" />
+                                                            <TextArea id="helpBack" editable="false" prefHeight="558.0" prefWidth="524.0" text="UMS supports the use of external applications to transcode media. These &#10;applications are: &#10;&#10;VLC Media Player: VLC (Videolan Codec) is a good choice for playing web &#10;streaming content. VLC is available for almost every platform including Windows, &#10;Linux and MacOsX. VLC version 0.9.8a works well, later versions may have issues. &#10;Download at https://www.videolan.org/vlc/index.html. Using VLC for streaming &#10;web videos like YouTube does not work well. It is better to use pmsencoder, a UMS &#10;plugin which works as a wrapper for the external applications MEncoder and &#10;ffmpeg.&#10;&#10;AviSynth: AviSynth is a frame server for free, available on Windows platform &#10;(development of the Linux version will not be continued). Regarding UMS readme &#10;one should install AviSynth 2.5.7. Latest AviSynth 2.5.8 seems to cause stuttering &#10;on certain files. After installing AviSynth you also have to install the plugin vsfilter. &#10;Download it here. You have to decompress the 7z-file and copy the vsfilter.dll &#10;from unicode-subdirectory to your AviSynth plugin directory &#10;(C:\program files\AviSynth 2.5\plugins).&#10;&#10;CoreAVC: CoreAVC is a very fast decoder for h.264 HD-videos, however it is not &#10;for free. You can get a trial version which is valid 14 days to see if the transcoding &#10;of h.264 HD-videos benefits from performance tuning. Can be downloaded at &#10;http://www.coreavc.com/">
+                                                               <font>
+                                                                  <Font size="12.0" />
+                                                               </font>
+                                                            </TextArea>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </Pane>
+                                       </children></AnchorPane>
+                                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="48.0" minWidth="543.0" prefHeight="48.0" prefWidth="543.0">
+                                       <children>
+                                          <SplitPane dividerPositions="0.48184818481848185" prefHeight="39.0" prefWidth="608.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <items>
+                                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="46.0" prefWidth="257.0">
+                                                   <children>
+                                                      <Button id="prevNextButton" alignment="BASELINE_CENTER" layoutX="28.0" layoutY="11.0" mnemonicParsing="false" onAction="#prevBtnPressed" prefHeight="47.0" prefWidth="289.0" text="&lt; Previous Section" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                   </children></AnchorPane>
+                                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="46.0" prefWidth="276.0">
+                                                   <children>
+                                                      <Button id="prevNextButton" alignment="BASELINE_CENTER" layoutX="130.0" layoutY="6.0" mnemonicParsing="false" onAction="#nextBtnPressed" prefHeight="37.0" prefWidth="311.0" text="Next Section &gt;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                   </children></AnchorPane>
+                                            </items>
+                                          </SplitPane>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

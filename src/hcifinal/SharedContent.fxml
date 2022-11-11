@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hcifinal.SharedContentController">
+    <stylesheets>
+        <URL value="@SharedContent.css" />
+    </stylesheets>
+    <children>
+      <SplitPane id="smallPane" dividerPositions="0.8946" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="715.0" prefWidth="1100.0">
+               <children>
+                  <SplitPane id="smallPane" dividerPositions="0.1377" layoutX="104.0" layoutY="93.0" orientation="VERTICAL" prefHeight="532.0" prefWidth="798.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane id="statusTitleBack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="97.0" prefWidth="1100.0">
+                           <children>
+                              <Text id="statusMenuTitle" layoutX="45.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shared Content" wrappingWidth="397.00000286102295">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="53.0" fitWidth="64.0" layoutX="355.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Photos/folderSymbol.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="84.0" fitWidth="86.0" layoutX="978.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Photos/Copy%20of%20Universal%20Media%20Player%20Logo.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1100.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <TabPane prefHeight="613.0" prefWidth="1100.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <tabs>
+                                  <Tab closable="false" text="Shared Folders">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="551.0" prefWidth="1080.0" style="-fx-background-color: #242020;">
+                                             <children>
+                                                <TableView fx:id="folderTable" layoutY="49.0" prefHeight="440.0" prefWidth="1107.0" stylesheets="@SharedContent.css">
+                                                  <columns>
+                                                    <TableColumn fx:id="folderNameColumn" prefWidth="761.0" styleClass="SharedContent_1" text="Folder Name" />
+                                                    <TableColumn fx:id="monitorColumn" prefWidth="341.0" text="Monitor Played Status" />
+                                                  </columns>
+                                                </TableView>
+                                                <Text id="detectedMediaText" layoutX="14.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Note: Add Folders To Share with Media Server" wrappingWidth="787.0" />
+                                                <Button id="smallButton" alignment="BASELINE_CENTER" layoutX="27.0" layoutY="502.0" mnemonicParsing="false" onAction="#addFolder" prefHeight="38.0" prefWidth="135.0" text="Add Folder">
+                                                   <graphic>
+                                                      <ImageView fitHeight="27.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0">
+                                                         <image>
+                                                            <Image url="@Photos/plus4.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button id="smallButton" alignment="BASELINE_CENTER" layoutX="349.0" layoutY="502.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="283.0" text="Scan Folders to Add to Server">
+                                                   <graphic>
+                                                      <ImageView fitHeight="27.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" translateX="-5.0" translateY="-2.0">
+                                                         <image>
+                                                            <Image url="@Photos/magnifyGlass.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="scan folders from list above" />
+                                                   </tooltip>
+                                                </Button>
+                                                <Button id="smallButton" alignment="BASELINE_CENTER" layoutX="173.0" layoutY="502.0" mnemonicParsing="false" onAction="#removeFolder" prefHeight="38.0" prefWidth="161.0" text="Remove Folder">
+                                                   <graphic>
+                                                      <ImageView fitHeight="26.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" translateX="-3.0">
+                                                         <image>
+                                                            <Image url="@Photos/cross.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="select a folder from the list and press this button to remove" />
+                                                   </tooltip>
+                                                </Button>
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                       <tooltip>
+                                          <Tooltip text="share personal folders" />
+                                       </tooltip>
+                                  </Tab>
+                                  <Tab text="Web Content">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #242020;">
+                                             <children>
+                                                <TableView fx:id="contentTable" layoutY="50.0" prefHeight="420.0" prefWidth="1107.0" style="-fx-background-insets: #535353;">
+                                                   <columns>
+                                                      <TableColumn fx:id="typeColumn" prefWidth="341.0" text="Type" />
+                                                      <TableColumn fx:id="webFolderNameColumn" prefWidth="400.0" text="Folder Name" />
+                                                      <TableColumn fx:id="sourceColumn" prefWidth="357.0" text="Source" />
+                                                   </columns>
+                                                </TableView>
+                                                <Text id="detectedMediaText" layoutX="14.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Note: Select Media Content To Share with Media Servers" wrappingWidth="787.0" />
+                                                <Button id="smallButton" alignment="BASELINE_CENTER" layoutX="21.0" layoutY="484.0" mnemonicParsing="false" onAction="#addWebContent" prefHeight="51.0" prefWidth="147.0" text="Add Content">
+                                                   <graphic>
+                                                      <ImageView fitHeight="27.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0">
+                                                         <image>
+                                                            <Image url="@Photos/plus4.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button id="smallButton" alignment="BASELINE_CENTER" layoutX="178.0" layoutY="484.0" mnemonicParsing="false" onAction="#removeWebContent" prefHeight="51.0" prefWidth="180.0" text="Remove Content">
+                                                   <graphic>
+                                                      <ImageView fitHeight="36.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true" translateX="-5.0">
+                                                         <image>
+                                                            <Image url="@Photos/cross.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="select content above and press this button to remove" />
+                                                   </tooltip>
+                                                </Button>
+                                             </children></AnchorPane>
+                                    </content>
+                                       <tooltip>
+                                          <Tooltip text="share web content found online" />
+                                       </tooltip>
+                                  </Tab>
+                                </tabs>
+                              </TabPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children></AnchorPane>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="1100.0">
+               <children>
+                  <SplitPane id="smallPane" dividerPositions="0.21105527638190955" prefHeight="60.0" prefWidth="798.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane id="bottomPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="231.0">
+                           <children>
+                              <ComboBox fx:id="options" layoutX="185.0" layoutY="10.0" onAction="#optionChanged" prefHeight="63.0" prefWidth="26.0" rotate="180.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="10.0" />
+                              <Label id="bottomButton" alignment="CENTER" layoutX="24.0" layoutY="10.0" mouseTransparent="true" prefHeight="63.0" prefWidth="161.0" text="Options" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="867.0">
+                           <children>
+                              <HBox id="bottomPane" alignment="CENTER" prefHeight="58.0" prefWidth="625.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Button id="bottomButton" alignment="BASELINE_RIGHT" mnemonicParsing="false" onAction="#openWebInterface" prefHeight="70.0" prefWidth="180.0" text="Open Web &#10;Interface&#10;">
+                                       <graphic>
+                                          <ImageView fitHeight="56.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true" translateX="-6.0">
+                                             <image>
+                                                <Image url="@Photos/earthSymbol.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <tooltip>
+                                          <Tooltip text="Keep interface open and open seperate browser for the web interface" />
+                                       </tooltip>
+                                    </Button>
+                                    <Button id="bottomButton" alignment="BASELINE_RIGHT" mnemonicParsing="false" onAction="#restartServer" prefHeight="70.0" prefWidth="180.0" text="Restart &#10;Server">
+                                       <graphic>
+                                          <ImageView fitHeight="57.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true" translateX="-20.0">
+                                             <image>
+                                                <Image url="@Photos/restart.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <tooltip>
+                                          <Tooltip text="Keep interface open and restart server" />
+                                       </tooltip>
+                                    </Button>
+                                    <Button id="bottomButton" alignment="BASELINE_RIGHT" mnemonicParsing="false" onAction="#shutDownServer" prefHeight="70.0" prefWidth="180.0" text="Shutdown &#10;Server">
+                                       <graphic>
+                                          <ImageView fitHeight="58.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" translateX="-5.0">
+                                             <image>
+                                                <Image url="@Photos/powerButton.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <tooltip>
+                                          <Tooltip text="shutdown server and close interface" />
+                                       </tooltip></Button>
+                                    <Button id="bottomButton" alignment="BASELINE_RIGHT" mnemonicParsing="false" onAction="#closeInterface" prefHeight="70.0" prefWidth="180.0" text="Close &#10;Interface">
+                                       <graphic>
+                                          <ImageView fitHeight="56.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true" translateX="-15.0">
+                                             <image>
+                                                <Image url="@Photos/minimizeSymbol.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <tooltip>
+                                          <Tooltip text="Close interface and add application to system tray" />
+                                       </tooltip></Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
