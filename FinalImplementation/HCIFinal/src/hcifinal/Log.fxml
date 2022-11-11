@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hcifinal.LogController">
+    <stylesheets>
+        <URL value="@Log.css" />
+    </stylesheets>
+    <children>
+      <SplitPane id="smallPane" dividerPositions="0.8946" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="715.0" prefWidth="1100.0">
+               <children>
+                  <SplitPane id="smallPane" dividerPositions="0.1377" orientation="VERTICAL" prefHeight="532.0" prefWidth="798.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane id="statusTitleBack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="97.0" prefWidth="1100.0">
+                           <children>
+                              <Text id="statusMenuTitle" layoutX="31.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logs" wrappingWidth="276.00000286102295">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="60.0" fitWidth="173.0" layoutX="108.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Photos/logSymbol.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="83.0" fitWidth="97.0" layoutX="981.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Photos/Copy%20of%20Universal%20Media%20Player%20Logo.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane id="statusMiddleBack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1100.0">
+                           <children>
+                              <SplitPane id="smallPane" dividerPositions="0.1592920353982301" orientation="VERTICAL" prefHeight="454.0" prefWidth="796.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane id="statusMiddleBack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="97.0" prefWidth="1100.0">
+                                       <children>
+                                          <Text fill="WHITE" layoutX="14.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log Search:" wrappingWidth="165.00000953674316" />
+                                          <CheckBox layoutX="123.0" layoutY="15.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="165.0" text="case sensitive" textFill="WHITE" />
+                                          <CheckBox layoutX="261.0" layoutY="15.0" mnemonicParsing="false" text="RegEx" textFill="WHITE" />
+                                          <CheckBox layoutX="365.0" layoutY="15.0" mnemonicParsing="false" text="multiline" textFill="WHITE" />
+                                          <Text fill="WHITE" layoutX="14.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter:" wrappingWidth="63.13671875" />
+                                          <ComboBox layoutX="123.0" layoutY="47.0" prefHeight="17.0" prefWidth="112.0" promptText="Info" />
+                                          <TextField fx:id="searchField" layoutX="261.0" layoutY="47.0" prefHeight="25.0" prefWidth="433.0" />
+                                          <Button id="smallButton" layoutX="705.0" layoutY="49.0" mnemonicParsing="false" onAction="#searchBtnPressed" prefHeight="17.0" prefWidth="97.0" text="Search" />
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="517.0" minWidth="1100.0" prefHeight="517.0" prefWidth="1100.0">
+                                       <children>
+                                          <SplitPane id="smallPane" dividerPositions="0.8699029126213592" orientation="VERTICAL" prefHeight="387.0" prefWidth="794.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <items>
+                                              <AnchorPane id="statusMiddleBack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="1100.0">
+                                                   <children>
+                                                      <Text fill="WHITE" layoutX="380.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- No Log Info Present -" textAlignment="CENTER" wrappingWidth="332.00000381469727">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <TableView fx:id="logTable" layoutX="1.0" layoutY="-5.0" prefHeight="456.0" prefWidth="1100.0" style="-fx-background-insets: #535353;">
+                                                        <columns>
+                                                          <TableColumn fx:id="logColumn" prefWidth="1098.0" text="Log Information" />
+                                                        </columns>
+                                                      </TableView>
+                                                   </children></AnchorPane>
+                                              <AnchorPane id="statusMiddleBack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="1100.0">
+                                                   <children>
+                                                      <Button id="smallButton" layoutX="14.0" layoutY="18.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="146.0" text="Create TRACE Logs" />
+                                                      <Button id="smallButton" layoutX="174.0" layoutY="18.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="146.0" text="Pack debug Files" />
+                                                      <CheckBox layoutX="354.0" layoutY="24.0" mnemonicParsing="false" text="show logging options" textFill="WHITE" />
+                                                      <Text fill="WHITE" layoutX="889.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log Level:" />
+                                                      <Button id="smallButton" layoutX="966.0" layoutY="21.0" mnemonicParsing="false" text="Full Log" />
+                                                   </children>
+                                                </AnchorPane>
+                                            </items>
+                                          </SplitPane>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children></AnchorPane>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="83.0" prefWidth="1100.0">
+               <children>
+                  <SplitPane id="smallPane" dividerPositions="0.21105527638190955" layoutY="-1.0" prefHeight="83.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+                    <items>
+                      <AnchorPane id="bottomPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="84.0" prefWidth="231.0">
+                           <children>
+                              <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="120.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Photos/moreOpt.png" />
+                                 </image>
+                              </ImageView>
+                              <ComboBox fx:id="options" layoutX="182.0" layoutY="9.0" onAction="#optionChanged" prefHeight="63.0" prefWidth="24.0" rotate="180.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="9.0">
+                                 <tooltip>
+                                    <Tooltip text="press to open options " />
+                                 </tooltip></ComboBox>
+                              <Label id="mylabel" alignment="CENTER" layoutX="21.0" layoutY="10.0" prefHeight="63.0" prefWidth="161.0" text="Options" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane id="bottomPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="84.0" prefWidth="867.0">
+                           <children>
+                              <HBox alignment="CENTER" layoutY="-2.0" prefHeight="58.0" prefWidth="625.0" spacing="20.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-2.0">
+                                 <children>
+                                    <Button id="bottomButton" alignment="BASELINE_RIGHT" mnemonicParsing="false" onAction="#openWebInterface" prefHeight="70.0" prefWidth="180.0" text="Open Web &#10;Interface&#10;">
+                                       <graphic>
+                                          <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true" translateX="-6.0">
+                                             <image>
+                                                <Image url="@Photos/earthSymbol.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <tooltip>
+                                          <Tooltip text="Keep interface open and open seperate browser for the web interface" />
+                                       </tooltip>
+                                    </Button>
+                                    <Button id="bottomButton" alignment="BASELINE_RIGHT" mnemonicParsing="false" onAction="#restartServer" prefHeight="70.0" prefWidth="180.0" text="Restart &#10;Server">
+                                       <graphic>
+                                          <ImageView fitHeight="55.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true" translateX="-20.0">
+                                             <image>
+                                                <Image url="@Photos/restart.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <tooltip>
+                                          <Tooltip text="Keep interface open and restart server" />
+                                       </tooltip>
+                                    </Button>
+                                    <Button id="bottomButton" alignment="BASELINE_RIGHT" mnemonicParsing="false" onAction="#shutDownServer" prefHeight="70.0" prefWidth="180.0" text="Shutdown &#10;Server">
+                                       <graphic>
+                                          <ImageView fitHeight="57.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0">
+                                             <image>
+                                                <Image url="@Photos/powerButton.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <tooltip>
+                                          <Tooltip text="Shutdown Server and Close Interface" />
+                                       </tooltip>
+                                    </Button>
+                                    <Button id="bottomButton" alignment="BASELINE_RIGHT" mnemonicParsing="false" onAction="#closeInterface" prefHeight="70.0" prefWidth="180.0" text="Close &#10;Interface">
+                                       <graphic>
+                                          <ImageView fitHeight="56.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" translateX="-15.0">
+                                             <image>
+                                                <Image url="@Photos/minimizeSymbol.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <tooltip>
+                                          <Tooltip text="Close interface and add application to system tray." />
+                                       </tooltip>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,108 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15/04/2020, 10:49:31 PM
+    Author     : alexm
+*/
+
+root { 
+    display: block;
+}
+
+
+#mylabel {
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-font-family: "avenir";
+    -fx-font-weight: bold;
+    -fx-background-color: #242020;
+    -fx-border-color: white;
+    -fx-border-width: 1px
+}
+
+
+#welcome-text {
+   -fx-font-size: 32px;
+   -fx-font-family: "Arial Black";
+   -fx-fill: #818181;
+   -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+#actiontarget {
+  -fx-fill: FIREBRICK;
+  -fx-font-weight: bold;
+  -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );  
+}
+
+.button {
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-font-family: "avenir";
+    -fx-font-weight: bold;
+    -fx-background-color: #242020;
+    -fx-border-color: white;
+    -fx-border-width: 1px
+}
+
+.button:hover{
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-font-family: "avenir";
+    -fx-font-weight: bold;
+    -fx-background-color: #10adbb
+}
+
+.button:pressed{
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-font-family: "avenir";
+    -fx-font-weight: bold;
+    -fx-background-color: #10adbb
+}
+
+#statusTitleBack {
+    -fx-background-color: #10adbb
+    
+}
+
+#statusMiddleBack {
+    -fx-background-color: #3c3939
+    
+}
+
+
+
+#statusMenuTitle {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-font-family: "avenir";
+    -fx-fill: white;
+}
+
+#subTitles {
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-font-family: "avenir";
+    -fx-fill: white;
+}
+
+#textAreaBack{
+    -fx-text-fill: white;
+    -fx-background-color: #3c3939    
+}
+
+.text-area .content {
+    -fx-background-color: #3c3939;
+    
+}
+
+#detectedMediaText {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-font-family: "avenir";
+    -fx-fill: white;
+}
+
+

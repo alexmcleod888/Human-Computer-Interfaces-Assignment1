@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="800.0" maxWidth="1100.0" minHeight="800.0" minWidth="1100.0" prefHeight="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hcifinal.MediaStatusController">
+    <stylesheets>
+        <URL value="@MediaStatus.css" />
+    </stylesheets>
+    <children>
+      <SplitPane id="smallPane" dividerPositions="0.8946" orientation="VERTICAL" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane id="statusMiddleBack" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane id="smallPane" dividerPositions="0.13773584905660377" orientation="VERTICAL" prefHeight="532.0" prefWidth="798.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane id="statusTitleBack" maxHeight="97.0" maxWidth="1100.0" minHeight="97.0" minWidth="1100.0" prefHeight="97.0" prefWidth="1100.0">
+                           <children>
+                              <Text id="statusMenuTitle" layoutX="36.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Media Status " wrappingWidth="276.00000286102295">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="70.0" fitWidth="84.0" layoutX="286.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Photos/computerSymbol.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="84.0" fitWidth="90.0" layoutX="978.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Photos/Copy%20of%20Universal%20Media%20Player%20Logo.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane id="statusMiddleBack" minHeight="0.0" minWidth="0.0" prefHeight="342.0" prefWidth="796.0">
+                           <children>
+                              <SplitPane id="smallPane" dividerPositions="0.8341543513957307" layoutX="-1.0" orientation="VERTICAL" prefHeight="614.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane id="statusMiddleBack" maxHeight="513.0" maxWidth="1100.0" minHeight="513.0" minWidth="1100.0" prefHeight="513.0" prefWidth="1100.0">
+                                       <children>
+                                          <Text fx:id="helpline3" fill="WHITE" layoutX="147.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="For more info select help from options." textAlignment="CENTER" wrappingWidth="800.0">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="helpline1" fill="WHITE" layoutX="148.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Note: No media redenderer's detected. -" textAlignment="CENTER" wrappingWidth="798.0000019073486">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Text>
+                                          <Text id="detectedMediaText" layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Detected Media Renderer's" underline="true" wrappingWidth="800.0" />
+                                          <Text fx:id="helpline2" fill="#f8f8f8" layoutX="102.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Turn on media device to automatically connect or press the detect button to search for devices." textAlignment="CENTER" wrappingWidth="890.0">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Text>
+                                          <ImageView fx:id="eternet" fitHeight="148.0" fitWidth="148.0" layoutX="129.0" layoutY="66.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Photos/eternet.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="ybox" fitHeight="163.0" fitWidth="290.0" layoutX="405.0" layoutY="59.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Photos/ybox.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="gamestation" fitHeight="215.0" fitWidth="290.0" layoutX="754.0" layoutY="62.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Photos/Gamestation.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button layoutX="912.0" layoutY="462.0" mnemonicParsing="false" onAction="#detectMedia" prefHeight="37.0" prefWidth="84.0" text="Detect">
+                                             <tooltip>
+                                                <Tooltip text="Check for the any new devices on the network" />
+                                             </tooltip></Button>
+                                          <Button layoutX="1002.0" layoutY="462.0" mnemonicParsing="false" onAction="#clearMedia" prefHeight="37.0" prefWidth="84.0" text="Clear">
+                                             <tooltip>
+                                                <Tooltip text="Clear all currently detected devices" />
+                                             </tooltip></Button>
+                                          <Text fx:id="eternetInfo" fill="WHITE" layoutX="99.0" layoutY="228.0" lineSpacing="0.5" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Eternet Explorer&#10;192.168.1.1&#10;" textAlignment="CENTER" wrappingWidth="200.10107421875">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="yboxInfo" fill="WHITE" layoutX="447.0" layoutY="228.0" lineSpacing="0.5" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ybox&#10;192.168.1.2&#10;" textAlignment="CENTER" wrappingWidth="200.10107421875">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="gamestationInfo" fill="WHITE" layoutX="799.0" layoutY="228.0" lineSpacing="0.5" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gamestation&#10;192.168.1.3&#10;" textAlignment="CENTER" wrappingWidth="200.10107421875">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane id="statusMiddleBack" maxHeight="101.0" maxWidth="1100.0" minHeight="101.0" minWidth="1100.0" prefHeight="101.0" prefWidth="1100.0">
+                                       <children>
+                                          <Text id="detectedMediaText" layoutX="22.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Memory Usage:" />
+                                          <ProgressBar fx:id="memoryUsageBar" layoutX="22.0" layoutY="56.0" prefHeight="18.0" prefWidth="491.0" progress="0.0" />
+                                          <Text id="detectedMediaText" fx:id="currentMbs" layoutX="801.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current: 0.0 Mb/s" />
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane maxHeight="83.0" maxWidth="1100.0" minHeight="83.0" minWidth="1100.0" prefHeight="83.0" prefWidth="1100.0">
+               <children>
+                  <SplitPane id="smallPane" dividerPositions="0.21" layoutX="15.0" layoutY="14.0" prefHeight="84.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane id="bottomPane" maxHeight="83.0" maxWidth="230.0" minHeight="83.0" minWidth="230.0" prefHeight="83.0" prefWidth="230.0">
+                           <children>
+                              <ComboBox fx:id="options" layoutX="181.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#optionChanged" prefHeight="63.0" prefWidth="29.0" rotate="180.0">
+                                 <tooltip>
+                                    <Tooltip text="press to open options" />
+                                 </tooltip></ComboBox>
+                              <Label id="bottomButton" alignment="CENTER" layoutX="20.0" layoutY="11.0" mouseTransparent="true" prefHeight="63.0" prefWidth="161.0" text="Options">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane id="bottomPane" minHeight="0.0" minWidth="0.0" prefHeight="75.0" prefWidth="829.0">
+                           <children>
+                              <HBox id="smallPane" layoutY="-7.0" maxHeight="83.0" maxWidth="868.0" minHeight="83.0" minWidth="868.0" prefHeight="83.0" prefWidth="868.0" spacing="20.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-7.0">
+                                 <children>
+                                    <Button id="bottomButton" alignment="BASELINE_RIGHT" mnemonicParsing="false" onAction="#openWebInterface" prefHeight="70.0" prefWidth="180.0" text="Open Web &#10;Interface&#10;">
+                                       <graphic>
+                                          <ImageView fitHeight="55.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" translateX="-3.0">
+                                             <image>
+                                                <Image url="@Photos/earthSymbol.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <tooltip>
+                                          <Tooltip text="Keep interface open and open seperate browser for the web interface" />
+                                       </tooltip>
+                                    </Button>
+                                    <Button id="bottomButton" alignment="BASELINE_RIGHT" mnemonicParsing="false" onAction="#restartServer" prefHeight="70.0" prefWidth="180.0" text="Restart &#10;Server">
+                                       <graphic>
+                                          <ImageView fitHeight="53.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" translateX="-20.0">
+                                             <image>
+                                                <Image url="@Photos/restart.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <tooltip>
+                                          <Tooltip text="Keep interface open and restart server" />
+                                       </tooltip>
+                                    </Button>
+                                    <Button id="bottomButton" alignment="BASELINE_RIGHT" mnemonicParsing="false" onAction="#shutDownServer" prefHeight="70.0" prefWidth="180.0" text="Shutdown &#10;Server">
+                                       <graphic>
+                                          <ImageView fitHeight="55.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" translateX="-6.0">
+                                             <image>
+                                                <Image url="@Photos/powerButton.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <tooltip>
+                                          <Tooltip text="shutdown server and close interface" />
+                                       </tooltip>
+                                    </Button>
+                                    <Button id="bottomButton" alignment="BASELINE_RIGHT" mnemonicParsing="false" onAction="#closeInterface" prefHeight="70.0" prefWidth="180.0" text="Close &#10;Interface">
+                                       <graphic>
+                                          <ImageView fitHeight="51.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true" translateX="-15.0">
+                                             <image>
+                                                <Image url="@Photos/minimizeSymbol.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <tooltip>
+                                          <Tooltip text="Close interface and add application to system tray" />
+                                       </tooltip>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets left="40.0" top="15.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
